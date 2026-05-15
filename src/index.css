@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@500&family=Playfair+Display:ital,wght@1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ffe9b0;
+  --color-primary-container: #f2ca50;
+  --color-background: #131313;
+  --color-surface: #201f1f;
+  --color-surface-container: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #d0c5af;
+  --color-secondary: #d4c4b0;
+  --color-error: #ffb4ab;
+  --color-success: #4ade80;
+  --color-accent-blue: #4a90e2;
+  --color-accent-orange: #f5a623;
+
+  --font-display: "Sora", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body overflow-x-hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-[20px] border border-white/10;
+  }
+  
+  .mono-label {
+    @apply font-mono uppercase tracking-[0.2em] text-[0.7rem] text-primary;
+  }
+
+  .chaos-bg {
+    background: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #131313 10px, #131313 20px);
+  }
+
+  .phone-frame {
+    @apply w-[320px] h-[680px] border-8 border-surface-container-highest rounded-[3.5rem] overflow-hidden bg-black relative shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)];
+  }
+
+  .btn-glow {
+    @apply transition-all hover:shadow-[0_0_25px_rgba(242,202,80,0.4)];
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+  }
+}
+
