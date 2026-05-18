@@ -367,55 +367,74 @@ export default function App() {
                 <div className="pt-10 px-6 pb-12 h-full flex flex-col items-center bg-background">
                   <div className="font-display font-bold text-primary self-start mb-10">Аналітика</div>
                     <div className="w-48 h-48 relative flex items-center justify-center">
-                    <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full -rotate-90 drop-shadow-[0_0_20px_rgba(242,202,80,0.1)]">
-                      {/* Background circle */}
+                    <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full -rotate-90 drop-shadow-[0_0_20px_rgba(242,202,80,0.05)]">
+                      {/* Outer Background circle */}
                       <circle 
-                        cx="50" cy="50" r="38" 
+                        cx="50" cy="50" r="42" 
                         fill="transparent" 
                         stroke="currentColor" 
-                        strokeWidth="8" 
+                        strokeWidth="5" 
                         className="text-primary/10"
                       />
-                      {/* Progress circle */}
+                      {/* Outer Progress circle */}
                       <circle 
-                        cx="50" cy="50" r="38" 
+                        cx="50" cy="50" r="42" 
                         fill="transparent" 
                         stroke="currentColor" 
-                        strokeWidth="8" 
-                        strokeDasharray="238.76"
-                        strokeDashoffset="59.69"
+                        strokeWidth="5" 
+                        strokeDasharray="263.89"
+                        strokeDashoffset="65.97"
                         strokeLinecap="round"
                         className="text-primary"
                       />
+                      {/* Inner Background circle */}
+                      <circle 
+                        cx="50" cy="50" r="34" 
+                        fill="transparent" 
+                        stroke="currentColor" 
+                        strokeWidth="5" 
+                        className="text-accent-orange/10"
+                      />
+                      {/* Inner Progress circle */}
+                      <circle 
+                        cx="50" cy="50" r="34" 
+                        fill="transparent" 
+                        stroke="currentColor" 
+                        strokeWidth="5" 
+                        strokeDasharray="213.63"
+                        strokeDashoffset="106.81"
+                        strokeLinecap="round"
+                        className="text-accent-orange/60"
+                      />
                     </svg>
                     <div className="text-center relative z-10">
-                      <div className="text-[10px] text-secondary uppercase font-mono tracking-[0.2em] mb-1 opacity-60">Разом</div>
-                      <div className="text-2xl font-bold font-mono tracking-tighter">58.4k</div>
+                      <div className="text-[7px] text-secondary uppercase font-mono tracking-[0.2em] mb-1 opacity-50">Разом</div>
+                      <div className="text-[12px] font-bold font-mono tracking-tighter">58.4k</div>
                     </div>
                   </div>
                     <div className="mt-12 w-full space-y-3 h-full overflow-y-auto custom-scrollbar pb-32">
-                      <div className="flex items-center justify-between bg-surface p-3 rounded-xl border border-white/5">
+                      <div className="flex items-center justify-between bg-surface-container p-3 rounded-xl border border-white/5">
                         <div className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent-blue"></div>
                           <span className="text-[10px]">Навчальні матеріали</span>
                         </div>
                         <span className="text-[10px] font-mono text-primary">12.5k</span>
                       </div>
-                      <div className="flex items-center justify-between bg-surface p-3 rounded-xl border border-white/5">
+                      <div className="flex items-center justify-between bg-surface-container p-3 rounded-xl border border-white/5">
                         <div className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent-orange"></div>
                           <span className="text-[10px]">Ремонт та обладнання</span>
                         </div>
                         <span className="text-[10px] font-mono text-primary">24.2k</span>
                       </div>
-                      <div className="flex items-center justify-between bg-surface p-3 rounded-xl border border-white/5">
+                      <div className="flex items-center justify-between bg-surface-container p-3 rounded-xl border border-white/5">
                         <div className="flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-success"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
                           <span className="text-[10px]">Свята та заходи</span>
                         </div>
                         <span className="text-[10px] font-mono text-primary">15.8k</span>
                       </div>
-                      <div className="flex items-center justify-between bg-surface p-3 rounded-xl border border-white/5">
+                      <div className="flex items-center justify-between bg-surface-container p-3 rounded-xl border border-white/5">
                         <div className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
                           <span className="text-[10px]">Госппотреби</span>
@@ -475,18 +494,34 @@ export default function App() {
                 <div>
                   <h3 className="font-display font-black uppercase text-sm tracking-widest mb-6 opacity-40">Brand Identity</h3>
                   <p className="text-secondary leading-relaxed font-light text-lg">
-                    Fintech Noir поєднує <span className="text-on-surface font-medium">Glassmorphism</span> з висококонтрастним темним режимом. Це середовище, де безпека зустрічається з передовими технологіями через глибокі чорні кольори, напівпрозорі скляні панелі та фірмові золоті градієнти.
+                    Fintech Noir поєднує <span className="text-on-surface font-medium">Glassmorphism</span> з висококонтрастним темним режимом. Окрім фірмового золота, система використовує <span className="text-accent-blue font-medium">Ocean Blue</span> для освіти та <span className="text-accent-orange font-medium">Warm Amber</span> для господарських категорій, створюючи інтуїтивну візуальну сегментацію.
                   </p>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-12">
                   <div>
                     <h4 className="font-mono text-[10px] text-primary uppercase mb-4 tracking-tighter">Colors</h4>
-                    <div className="flex gap-2">
-                      <div className="w-12 h-12 rounded-xl gold-gradient shadow-[0_0_15px_rgba(242,202,80,0.3)]"></div>
-                      <div className="w-12 h-12 rounded-xl bg-background border border-white/10"></div>
-                      <div className="w-12 h-12 rounded-xl bg-surface border border-white/10"></div>
-                      <div className="w-12 h-12 rounded-xl glass-panel"></div>
+                    <div className="flex flex-wrap gap-4">
+                      <div className="flex flex-col gap-2 items-center">
+                        <div className="w-12 h-12 rounded-2xl gold-gradient shadow-[0_10px_20px_rgba(242,202,80,0.2)]"></div>
+                        <span className="font-mono text-[8px] opacity-40 uppercase">Primary</span>
+                      </div>
+                      <div className="flex flex-col gap-2 items-center">
+                        <div className="w-12 h-12 rounded-2xl bg-accent-blue shadow-[0_10px_20px_rgba(74,144,226,0.2)]"></div>
+                        <span className="font-mono text-[8px] opacity-40 uppercase">Accent Blue</span>
+                      </div>
+                      <div className="flex flex-col gap-2 items-center">
+                        <div className="w-12 h-12 rounded-2xl bg-accent-orange shadow-[0_10px_20px_rgba(245,166,35,0.2)]"></div>
+                        <span className="font-mono text-[8px] opacity-40 uppercase">Accent Amber</span>
+                      </div>
+                      <div className="flex flex-col gap-2 items-center">
+                        <div className="w-12 h-12 rounded-2xl glass-panel"></div>
+                        <span className="font-mono text-[8px] opacity-40 uppercase">Glass</span>
+                      </div>
+                      <div className="flex flex-col gap-2 items-center">
+                        <div className="w-12 h-12 rounded-2xl bg-surface-container border border-white/5"></div>
+                        <span className="font-mono text-[8px] opacity-40 uppercase">Surface</span>
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -559,10 +594,10 @@ export default function App() {
 
                     <div className="glass-panel p-4 rounded-2xl mb-6 relative overflow-hidden">
                       <div className="flex items-center gap-4 mb-3">
-                        <div className="w-9 h-9 rounded-xl bg-surface-container-highest flex items-center justify-center text-accent-orange text-sm">🛒</div>
+                        <div className="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-accent-orange text-lg">🛒</div>
                         <div>
-                          <div className="text-[9px] text-secondary/50 uppercase font-mono tracking-tighter">Category</div>
-                          <div className="text-xs font-bold">Household</div>
+                          <div className="text-[9px] text-secondary/50 uppercase font-mono tracking-wide">Category</div>
+                          <div className="text-sm font-bold">Household</div>
                         </div>
                       </div>
                       <div className="pt-3 border-t border-white/5">
@@ -616,19 +651,19 @@ export default function App() {
 
                     <div className="space-y-4 overflow-y-auto no-scrollbar pr-1 pb-20">
                       {[
-                        { icon: '🚌', title: 'Zoo excursion', price: '32 000 ₴', date: '10.05.2026, 12:00' },
-                        { icon: '💧', title: 'Drinking water (5 bottles)', price: '750 ₴', date: '09.05.2026, 14:30', active: true },
-                        { icon: '📚', title: 'Extra textbooks', price: '4 750 ₴', date: '08.05.2026, 10:15' }
+                        { icon: '🚌', title: 'Zoo excursion', price: '32 000 ₴', date: '10.05.2026, 12:00', color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+                        { icon: '💧', title: 'Drinking water (5 bottles)', price: '750 ₴', date: '09.05.2026, 14:30', active: true, color: 'text-accent-orange', bg: 'bg-accent-orange/10' },
+                        { icon: '📚', title: 'Extra textbooks', price: '4 750 ₴', date: '08.05.2026, 10:15', color: 'text-primary', bg: 'bg-primary/10' }
                       ].map((item, i) => (
                         <div key={i} className={`glass-panel p-4 rounded-2xl border-white/5 flex justify-between items-center ${item.active ? 'border-primary/20 bg-primary/5' : ''}`}>
                           <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center grayscale">{item.icon}</div>
+                            <div className={`w-10 h-10 rounded-xl ${item.bg} flex items-center justify-center`}>{item.icon}</div>
                             <div>
                               <div className="text-[11px] font-bold">{item.title}</div>
                               <div className="text-[8px] text-secondary/40 font-mono italic">{item.date}</div>
                             </div>
                           </div>
-                          <div className="text-xs font-mono font-bold text-primary">-{item.price}</div>
+                          <div className={`text-xs font-mono font-bold ${item.color}`}>-{item.price}</div>
                         </div>
                       ))}
                     </div>
@@ -661,7 +696,7 @@ export default function App() {
                     <div className="gold-gradient p-6 rounded-3xl text-background relative overflow-hidden mb-6 shadow-[0_20px_40px_rgba(212,175,55,0.2)]">
                       <div className="absolute top-4 right-4 bg-background/10 p-2 rounded-xl"><Snowflake size={14} /></div>
                       <div className="flex items-center gap-2 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                        <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                         <span className="text-[9px] uppercase font-black tracking-widest opacity-60">Active Collection</span>
                       </div>
                       <h3 className="font-display font-bold text-lg mb-6 leading-tight">New Air Conditioner Fund</h3>
@@ -695,13 +730,13 @@ export default function App() {
                         <span className="text-[10px] font-mono opacity-40">21/35</span>
                       </div>
                       {[
-                        { name: 'Anonymous #1', amount: '1000 ₴', time: 'Today, 14:30' },
-                        { name: 'Parent [Alexey M.]', amount: '1500 ₴', time: 'Today, 11:15' },
-                        { name: 'Anonymous #2', amount: '500 ₴', time: 'Yesterday' }
+                        { name: 'Oleg M.', amount: '1000 ₴', time: 'Today, 14:30', color: 'bg-accent-blue' },
+                        { name: 'Iryna K.', amount: '1500 ₴', time: 'Today, 11:15', color: 'bg-accent-orange' },
+                        { name: 'Pavlo S.', amount: '500 ₴', time: 'Yesterday', color: 'bg-primary' }
                       ].map((don, j) => (
                         <div key={j} className="glass-panel p-3.5 rounded-2xl flex items-center justify-between border-white/5">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-xl bg-surface flex items-center justify-center text-secondary/40 text-xs">👤</div>
+                            <div className={`w-1.5 h-1.5 rounded-full ${don.color}`} />
                             <div>
                                <div className="text-[10px] font-bold">{don.name}</div>
                                <div className="text-[8px] opacity-30 font-mono">{don.time}</div>
@@ -747,17 +782,17 @@ export default function App() {
                     <div className="mb-10">
                        <div className="flex justify-between items-baseline mb-3">
                           <div className="flex items-baseline gap-1.5">
-                            <span className="text-xl font-mono font-black text-primary">18</span>
-                            <span className="text-[10px] font-mono opacity-40 uppercase tracking-tighter">FOR</span>
+                            <span className="text-xl font-mono font-black text-accent-blue">18</span>
+                            <span className="text-[10px] font-mono opacity-40 uppercase tracking-tighter">YES</span>
                           </div>
                           <div className="flex items-baseline gap-1.5 text-right">
-                            <span className="text-sm font-mono opacity-40 uppercase tracking-tighter">AGAINST</span>
-                            <span className="text-xl font-mono font-black">10</span>
+                            <span className="text-sm font-mono opacity-40 uppercase tracking-tighter">NO</span>
+                            <span className="text-xl font-mono font-black text-accent-orange">10</span>
                           </div>
                        </div>
                        <div className="w-full h-2 bg-surface rounded-full overflow-hidden flex">
-                          <div className="h-full gold-gradient" style={{ width: '65%' }} />
-                          <div className="h-full bg-white/10" style={{ width: '35%' }} />
+                          <div className="h-full bg-accent-blue" style={{ width: '65%' }} />
+                          <div className="h-full bg-accent-orange/40" style={{ width: '35%' }} />
                        </div>
                        <p className="text-center text-[9px] italic opacity-40 mt-4 font-mono">Voting is ongoing...</p>
                     </div>
